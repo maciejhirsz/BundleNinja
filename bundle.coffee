@@ -27,7 +27,7 @@ config = JSON.parse(fs.readFileSync('config.json'))
 #################################################
 
 console.log("")
-console.log("  > Running bootstrap confing, reading and uglifying vendor stuff")
+console.log("  > Running bootstrap config, reading and uglifying vendor stuff")
 
 #
 # Helper function for checking if any given file isn't on the ignore list
