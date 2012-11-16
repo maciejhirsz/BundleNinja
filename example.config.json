@@ -1,0 +1,14 @@
+{
+  "minify": true,
+  "assets": "../package/public/assets",
+  "bundle": [
+    "/js", "/templates"
+  ],
+  "bootstrap": "../package/public/assets/js/bootstrap.js",
+  "output": "../package/public/assets/js/bundle.js",
+  "main": "js/main",
+  "texts": ["mustache"],
+  "ignore": [
+    "../package/public/assets/vendor/requirejs/text.js"
+  ]
+}
