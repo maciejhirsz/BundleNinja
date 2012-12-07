@@ -128,7 +128,7 @@ for path, data of files
 # Add a call to main js module, this allows you can completely skip the bootstrap file from
 # the final bundle - the only thing needed is the shim that has been already included.
 #
-bundle.push("  require("+JSON.stringify(config.main)+")")
+bundle.push("  require("+JSON.stringify(config.main)+");")
 
 #################################################
 
@@ -159,9 +159,3 @@ if config.minify
   # Yes, really, read and save to same file
   #
   fs.writeFileSync(config.output, UglifyJS.minify(config.output).code)
-
-#################################################
-
-console.log("")
-console.log("  > All done!")
-console.log("")
