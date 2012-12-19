@@ -98,7 +98,15 @@
            *   being messed up. If any of your modules need to assign stuff to global scope always
            *   do it via the `window` object.
            */
-          eval("(function(define){" + files[path] + "})")(define);
+          try {
+            eval("0?0:function(define){" + files[path] + "}")(define);
+          }catch(err){
+            if(typeof console && console.log){
+              console.log("Error in file " + path + " : " + JSON.stringify(err));
+            }
+            throw(err);
+          }
+
 
           /*
            * Check shim for exports (will return a property from global scope for non AMD requires)
